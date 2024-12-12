@@ -20,21 +20,17 @@ body {
     border: 1px solid rgb(0, 183, 255);
     box-shadow: 5px 5px 50px 5px var(--glow-color);
     position: fixed;
-    top: 20vh;
+    top: 200px;
     align-items: center;
     justify-content: center;
     display: flex;
 }
 
-.main-container p {
-    background: #ffffff;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+.main-container h1 {
     position: fixed;
-    top: 0;
+    top: 0px;
     font-style: normal;
     font-weight: 600;
-    font-size: 3em;
 }
 
 .form {
@@ -46,15 +42,31 @@ body {
     height: 30px;
     width: 30vw;
     border: 1px solid var(--glow-color);
-    border-radius: 20px;
+    border-radius: 0px;
     text-align: center;
     max-width: 250px;
-    min-width: 200px;
+    min-width: 100px;
+    border-image: 
+    linear-gradient(
+      to bottom, 
+      var(--glow-color), 
+      rgba(0, 0, 0, 0)
+    ) 1 20%;
 }
 
 .form input {
     margin-left: 10px;
     font-size: .7em;
+    box-sizing: border-box;
+    width: 90%;
+    color: rgb(127, 176, 255);
+}
+
+@media (max-width: 600px) {
+    .form input {
+        width: 90%;
+        margin-left: 5px;
+    }
 }
 
 .form button {
@@ -66,9 +78,9 @@ body {
     border-radius: 20px;
     height: 30px;
     background-color: rgb(0, 0, 0);
-    margin-top: 20px;
+    margin-top: 40px;
     border: 1px solid var(--glow-color);
-    box-shadow: 5px 10px 50px 5px var(--glow-color);
+    box-shadow: 1px 1px 50px 1px var(--glow-color);
 }
 
 .form button p {
@@ -80,8 +92,18 @@ body {
     background-color:var(--glow-color);
 }
 
+.form p {
+    font-size: .7em;
+    border-radius: 20px;
+    margin-top: -170px;
+}
+
 .footer {
     color: #ffffff;
     position: fixed;
-    bottom: 0px;
+    top: 70px;
+    font-family: monospace;
+    font-size: .7em;
+    letter-spacing: 1px;
+    opacity: .4;
 }
