@@ -8,6 +8,9 @@ body {
     align-items: center;
     justify-content: center;
     display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: auto; /* Allow scrolling */
 }
 
 .glow-bg {
@@ -150,7 +153,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    z-index: 1;
+    z-index: 2;
 }
 
 .main-container-success h1 {
@@ -203,13 +206,12 @@ body {
 .qr-code img{
     display: flex;
     height: 200px;
-    width: 90%;
     border: 1px solid var(--glow-color);
     border-image: linear-gradient(
         to bottom, 
         var(--glow-color), 
         rgba(0, 228, 137, 0)
-      ) 1 20%;;
+      ) 1 20%;
 }
 
 .qr-code button {
@@ -235,21 +237,21 @@ body {
     height: 40vh;
     width: 100%;
     position: fixed;
-    bottom: -250px;
+    bottom: -260px;
     border-radius: 100%;
     box-shadow: 1px 1px 100px 1px var(--glow-color);
+    z-index: -1;
 }
 
 /* Media queries for smaller screens */
 @media (max-width: 600px) {
     .glow-bg {
         width: 90%;
-        top: 25%;
+        top: 210px;
     }
 
     .main-container, .main-container-success {
         width: 90%;
-        top: 20%;
     }
 
     .form, .file-view button, .qr-code button {
@@ -260,17 +262,11 @@ body {
         width: 90%;
     } */
 
-    .main-container-success h2 {
-        top: 180px;
-    }
-
     .qr-code button {
         margin-top: 20px;
     }
-    /* .bottom-container {
-        border-radius: 350px 350px 0 0;
-        bottom: -180px;
-        width: 150vw;
+    .bottom-container {
+        bottom: -290px;
     }
-     */
+    
 }
