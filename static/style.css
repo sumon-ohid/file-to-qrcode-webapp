@@ -44,6 +44,7 @@ body {
     display: flex;
 }
 
+
 .main-container h1 {
     position: fixed;
     top: 0px;
@@ -78,14 +79,12 @@ body {
     box-sizing: border-box;
     width: 90%;
     color: rgb(127, 176, 255);
-    opacity: .8;
 }
 
 @media (max-width: 600px) {
     .form input {
         width: 90%;
         margin-left: 5px;
-        opacity: .8;
     }
 }
 
@@ -117,7 +116,6 @@ body {
     font-size: .7em;
     border-radius: 20px;
     margin-top: -170px;
-    opacity: .8;
 }
 
 .footer {
@@ -128,4 +126,105 @@ body {
     font-size: .7em;
     letter-spacing: 1px;
     opacity: .4;
+}
+
+/*----- Success page */
+
+.main-container-success {
+    background-color: black;
+    height: 500px;
+    width: 50vw;
+    font-family: "Poppins";
+    color: white;
+    border-radius: 20px 20px 0 0;
+    border: 1px solid rgb(0, 106, 255);
+    border-image: linear-gradient(
+        to top, 
+        var(--glow-color), 
+        rgba(0, 228, 137, 0)
+      ) 1 20%;;
+    position: fixed;
+    top: 200px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-container-success h1 {
+    position: fixed;
+    top: 0px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.main-container-success h2 {
+    position: fixed;
+    top: 220px;
+    font-style: normal;
+    font-weight: 0;
+    font-size: 1em;
+}
+
+
+.file-view button {
+    color: #ffffff;
+    margin-top: -20px;
+    height: 25px;
+    width: 180px;
+    background-color: black;
+    border: 1px solid var(--glow-color);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 1px 1px 50px 1px var(--glow-color);
+    font-family: monospace;
+    margin-top: 20px;
+}
+
+.file-view button:hover {
+    background-color: var(--glow-color);
+    color: black;
+}
+
+.qr-code {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.qr-code p {
+    font-family:monospace;
+    text-align: center;
+}
+
+.qr-code img{
+    display: flex;
+    height: 200px;
+    border: 1px solid var(--glow-color);
+    border-image: linear-gradient(
+        to bottom, 
+        var(--glow-color), 
+        rgba(0, 228, 137, 0)
+      ) 1 20%;;
+}
+
+.qr-code button {
+    color: #ffffff;
+    margin-top: -20px;
+    height: 25px;
+    width: 180px;
+    background-color: black;
+    border: 1px solid var(--glow-color);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 1px 1px 50px 1px var(--glow-color);
+    font-family: monospace;
+    margin-top: 20px;
+}
+
+.qr-code button:hover {
+    background-color: var(--glow-color);
+    color: black;
 }

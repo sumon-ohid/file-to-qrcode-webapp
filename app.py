@@ -5,7 +5,7 @@ from PIL import Image
 
 app = Flask(__name__)
 
-# Set the upload folder to be relative to the location of app.py
+# upload folder to be relative to the location of app.py
 app.config['UPLOAD_FOLDER'] = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'uploads')
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
@@ -26,7 +26,7 @@ def upload():
     file_path = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
     file.save(file_path)
 
-    # Simulate a cloud upload by generating a local file link
+    # file link
     file_link = f"/uploads/{file.filename}"
 
     # Generate a QR code for the file link
@@ -37,12 +37,7 @@ def upload():
     img = qr.make_image(fill='black', back_color='white')
     img.save(qr_code_path)
 
-    return f'''
-    <h1>File Uploaded Successfully</h1>
-    <p>View your file: <a href="{file_link}" target="_blank">{file_link}</a></p>
-    <p>QR Code:</p>
-    <img src="/qr_code/{file.filename}" alt="QR Code">
-    '''
+    return render_template('success.html', file_link=file_link, qr_code_path=f"/qr_code/{file.filename}")
 
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):

@@ -12,13 +12,21 @@
 </head>
 <body>
     <div class="glow-bg">
-        <div class="main-container">
+        <div class="main-container-success">
             <h1>Any File to QR code</h1>
-            <form class="form" action="/upload" method="post" enctype="multipart/form-data">
-                <input type="file" name="file">
-                <button type="submit">convert</button>
-                <p>Generate QR code for any file<br>then scan the code to view the file</p>
-            </form>
+            <h2>QR Successfully created 🎉</h2>
+            <div class="file-view">
+                <a href="{{ file_link }}" target="_blank">
+                    <button>file preview</button>
+                </a>
+            </div>
+            <div class="qr-code">
+                <p>QR Code:</p>
+                <img src="{{ qr_code_path }}" alt="QR Code">
+                <a href="{{ qr_code_path }}" download="qr_code.png">
+                    <button>Download QR Code</button>
+                </a>
+            </div>
         </div>
     </div>
     <div class="footer">made by: sumon</div>
