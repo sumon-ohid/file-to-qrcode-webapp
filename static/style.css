@@ -228,3 +228,12 @@ body {
     background-color: var(--glow-color);
     color: black;
 }
+
+.bottom-container {
+    height: 50vh;
+    width: 100%;
+    position: fixed;
+    bottom: -340px;
+    border-radius: 100%;
+    box-shadow: 1px 1px 100px 1px var(--glow-color);
+}
