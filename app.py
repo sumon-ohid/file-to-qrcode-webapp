@@ -2,10 +2,8 @@ from flask import Flask, request, send_from_directory, render_template
 import qrcode
 import os
 from PIL import Image
-from flask_frozen import Freezer
 
 app = Flask(__name__)
-freezer = Freezer(app)
 
 # upload folder to be relative to the location of app.py
 app.config['UPLOAD_FOLDER'] = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'uploads')
@@ -51,14 +49,3 @@ def qr_code(filename):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=9000, threaded=False)
-
-# this block to freeze the app
-@freezer.register_generator
-def url_generator():
-    yield 'home'
-    yield 'uploaded_file', {'filename': 'example.txt'}
-    yield 'qr_code', {'filename': 'example.txt'}
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=9000, threaded=False)
-    freezer.freeze()
