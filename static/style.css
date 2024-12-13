@@ -150,6 +150,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    z-index: 1;
 }
 
 .main-container-success h1 {
@@ -255,9 +256,9 @@ body {
         width: 100%;
     }
 
-    .qr-code img {
+    /* .qr-code img {
         width: 90%;
-    }
+    } */
 
     .main-container-success h2 {
         top: 180px;
