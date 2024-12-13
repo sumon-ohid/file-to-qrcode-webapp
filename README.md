@@ -1,6 +1,6 @@
 # File to QR code
 
-This Web App with store uploaded file on cloud and create a link for the file, then genarate a QR code with that link. So if you scan the QR code you can view the file. 
+This Web App will store uploaded file on a cloud storage and create a link for the file, then genarate a QR code with that link. So if you scan the QR code and view the file. 
 
 It's a easy way to share file with others, show case your CV or Menu if you are a restaurent owner and many others things.
 
