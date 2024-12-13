@@ -32,7 +32,7 @@ def upload():
     # Generate a QR code for the file link
     qr_code_path = os.path.join(app.config['UPLOAD_FOLDER'], f"{file.filename}.png")
     qr = qrcode.QRCode()
-    qr.add_data(f"http://127.0.0.1:9000{file_link}")
+    qr.add_data(f"https://file-to-qrcode-webapp.onrender.com{file_link}")
     qr.make(fit=True)
     img = qr.make_image(fill='black', back_color='white')
     img.save(qr_code_path)
