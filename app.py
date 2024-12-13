@@ -5,6 +5,9 @@ from PIL import Image
 
 app = Flask(__name__)
 
+# Set the maximum file size to 10MB
+app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024  # 10MB
+
 # upload folder to be relative to the location of app.py
 app.config['UPLOAD_FOLDER'] = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'uploads')
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
